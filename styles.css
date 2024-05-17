@@ -1,0 +1,294 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    color: hsl(187, 24%, 22%);
+    background-color: hsl(148, 38%, 91%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem;
+}
+
+.container {
+    width: 800px;
+    /* Set a fixed width */
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    /* Changed to column */
+    align-items: center;
+    /* Centered horizontally */
+    margin: 0 auto;
+    /* Centered horizontally */
+}
+
+h1 {
+    margin-top: auto;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Form Styles */
+.form-container {
+    width: 100%;
+    /* Added width: 100% */
+    margin-right: 0;
+    /* Removed margin-right */
+}
+
+div label {
+    margin-bottom: 10px;
+}
+
+
+/* General styling for input-group */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: hsl(169, 82%, 27%);
+}
+
+/* Styling for name-group */
+.name-group {
+    display: flex;
+    gap: 20px;
+    /* Adjust the gap between the name fields */
+    margin-bottom: 20px;
+    /* Space below name-group */
+}
+
+.name-group div {
+    flex: 1;
+    /* Equal space for first and last name fields */
+    min-width: 0;
+    /* Allows shrinking below content size */
+}
+
+.name-group label,
+.name-group input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* General styling for input-group */
+.input-group {
+    margin-bottom: 30px;
+    /* Space below each input group */
+}
+
+.input-group label,
+.input-group input,
+.input-group textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-group input,
+.input-group textarea {
+    max-width: 100%;
+    /* Prevents overflowing */
+}
+
+/* Styling for radio-group */
+.radio-group {
+    display: flex;
+    gap: 20px;
+    /* Adjust the gap between radio options */
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    /* Make the options take equal space */
+    min-width: 0;
+    /* Allows shrinking below content size */
+}
+
+.radio-option input[type="radio"] {
+    display: none;
+    /* Hide the default radio button */
+}
+
+.radio-option label {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+    width: 100%;
+    /* Make the label take full width */
+    box-sizing: border-box;
+    /* Include padding and border in the width */
+}
+
+.radio-option input[type="radio"]:checked+label {
+    border-color: hsl(186, 15%, 59%);
+    background-color: hsl(186, 15%, 90%);
+}
+
+.radio-option label:hover {
+    border-color: hsl(186, 15%, 59%);
+}
+
+/* Custom bullet point */
+.radio-option input[type="radio"]:checked+label::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+    background-color: hsl(186, 15%, 59%);
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 4px #fff;
+}
+
+/* Styling for checkbox-consent */
+.checkbox-consent {
+    margin-bottom: 20px;
+    /* Space below the checkbox group */
+}
+
+.checkbox-consent input[type="checkbox"] {
+    display: none;
+    /* Hide the default checkbox */
+}
+
+.checkbox-consent label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 25px;
+    /* Add padding for the custom checkbox */
+    position: relative;
+    font-size: 16px;
+    /* Adjust font size as needed */
+}
+
+.checkbox-consent label::before {
+    content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgZmlsbD0ibm9uZSIgeD0iMCIgeT0iMCI+PGpathcmNvbG9yPjBsMTUgNS4yNWExLjc0OCAxLjc0OCAwIDAgMS0xLjA2IDBsLTIuMjUtMi4yNWEuNzUuNzUgMCAwIDEtMS4wNiAwbC0yLjI1LTIuMjVhLjc1Ljc1IDAgMSAxIDEuMDYtbC0xLjcyIDEuNzJhLjc1MS43NTEgMCAwIDEgMS4wNiAxLjA2bDMuMjIgMy4yMmEuNzUxLjc1MSAwIDAgMSAxLjA2IDEuMDZ6Ii8+PC9zdmc+");
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 0;
+}
+
+.checkbox-consent input[type="checkbox"]:checked + label::before {
+    content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgZmlsbD0ibm9uZSIgeD0iMCIgeT0iMCI+PGpathcmNvbG9yPjBsMTUgNS4yNWExLjc0OCAxLjc0OCAwIDAgMS0xLjA2IDBsLTIuMjUtMi4yNWEuNzUuNzUgMCAwIDEtMS4wNiAwbC0yLjI1LTIuMjVhLjc1Ljc1IDAgMSAxIDEuMDYtbC0xLjcyIDEuNzJhLjc1MS43NTEgMCAwIDEgMS4wNiAxLjA2bDMuMjIgMy4yMmEuNzUxLjc1MSAwIDAgMSAxLjA2IDEuMDZ6Ii8+PC9zdmc+");
+}
+
+
+
+button[type="submit"] {
+    width: 100%;
+    background-color: hsl(169, 82%, 27%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: hsl(169, 70%, 35%);
+}
+
+/* Error Styles */
+.error-message {
+    color: hsl(0, 66%, 56%);
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+input:invalid,
+textarea:invalid {
+    border-color: hsl(0, 66%, 56%);
+}
+
+input:invalid+.error-message,
+textarea:invalid+.error-message {
+    display: block;
+}
+
+/* Success Container */
+.success-container {
+    text-align: center;
+    background-color: hsl(187, 24%, 22%);
+    color: hsl(0, 0%, 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.success-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.success-message img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+}
+
+.success-message p {
+    margin: 0.5rem 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media Queries */
+@media (max-width: 1440px) {
+    .container {
+        width: 100%;
+        /* Set width to 100% for smaller screens */
+        padding: 1rem;
+    }
+
+    .form-container {
+        margin-bottom: 2rem;
+    }
+
+    .radio-group {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .success-container {
+        padding: 1rem;
+    }
+}
